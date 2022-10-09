@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16;
+  height: 100vh;
+
+  display: grid;
+  /* This is the representation of how we want our template.
+  header we want all the sapce above thats why is written 3 times */
+  grid-template-areas:
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 70px; 
+}
+
+header,
+main,
+nav,
+aside,
+footer {
+  background-color: lightblue;
+  color: #333;
+  padding: 20px;
+  border: #777 1px solid;
+}
+
+/* no point is used at the beginning. */
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
